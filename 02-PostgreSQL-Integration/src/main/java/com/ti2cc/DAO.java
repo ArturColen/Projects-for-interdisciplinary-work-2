@@ -65,39 +65,48 @@ public class DAO {
     
     public boolean updateStudent(Student student) {
         boolean status = false;
-        
-        try {  
-            Statement st = connection.createStatement();
-            String sql = "UPDATE students SET name = '" + student.getName() + "', email = '"  
-                       + student.getEmail() + "', phone_number = '" + student.getPhoneNumber() + "',"
-                       + " enrollment_date = '" + student.getEnrollmentDate() + "', course = '" 
-                       + student.getCourse() + "' WHERE id = " + student.getId();
-            
-            st.executeUpdate(sql);
+
+        try {
+            Statement st = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = st.executeQuery("SELECT * FROM students WHERE id = " + student.getId());
+
+            if (rs.next()) {
+                String sql = "UPDATE students SET name = '" + student.getName() + "', email = '"  
+                           + student.getEmail() + "', phone_number = '" + student.getPhoneNumber() + "',"
+                           + " enrollment_date = '" + student.getEnrollmentDate() + "', course = '" 
+                           + student.getCourse() + "' WHERE id = " + student.getId();
+
+                st.executeUpdate(sql);
+                status = true;
+            }
+
             st.close();
-            status = true;
         } catch (SQLException u) {  
             throw new RuntimeException(u);
         }
-        
+
         return status;
     }
-    
+
     public boolean deleteStudent(int id) {
         boolean status = false;
-        
-        try {  
-            Statement st = connection.createStatement();
-            st.executeUpdate("DELETE FROM students WHERE id = " + id);
+
+        try {
+            Statement st = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = st.executeQuery("SELECT * FROM students WHERE id = " + id);
+
+            if (rs.next()) {
+                st.executeUpdate("DELETE FROM students WHERE id = " + id);
+                status = true;
+            }
+
             st.close();
-            status = true;
-        } catch (SQLException u) {  
+        } catch (SQLException u) {
             throw new RuntimeException(u);
         }
-        
+
         return status;
     }
-    
     
     public Student[] getStudents() {
         Student[] students = null;

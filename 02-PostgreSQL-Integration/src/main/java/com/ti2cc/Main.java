@@ -14,6 +14,7 @@ public class Main {
         } else {
             System.out.println("Nenhum aluno encontrado.");
         }
+        
         System.out.println(); // Adds a blank line to separate from the next menu
     }
 
@@ -42,6 +43,7 @@ public class Main {
         } else {
             System.out.println("Erro ao inserir aluno.");
         }
+        
         System.out.println(); // Adds a blank line to separate from the next menu
     }
 
@@ -57,6 +59,7 @@ public class Main {
         } else {
             System.out.println("Erro ao excluir aluno. Verifique se o ID está correto.");
         }
+        
         System.out.println(); // Adds a blank line to separate from the next menu
     }
 
@@ -87,8 +90,9 @@ public class Main {
         if (dao.updateStudent(student)) {
             System.out.println("Aluno atualizado com sucesso!");
         } else {
-            System.out.println("Erro ao atualizar aluno.");
+            System.out.println("Erro ao atualizar aluno. Verifique se o ID está correto.");
         }
+        
         System.out.println(); // Adds a blank line to separate from the next menu
     }
 

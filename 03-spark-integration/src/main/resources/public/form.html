@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cadastro de Alunos</title>
+        <!-- === Font === -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- === CSS File === -->
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <main>
+            <form>
+                <h1>Registro de Alunos</h1>
+                <input type="text" placeholder="Nome Completo" id="name" />
+                <input type="email" placeholder="E-mail" />
+                <input type="text" placeholder="Número de telefone" id="phone" />
+                <div id="dual">
+                    <input type="date" />
+                    <input type="text" placeholder="Curso em andamento" />
+                </div>
+                <button type="submit">Cadastrar</button>
+                <div id="line"></div>
+                <div id="options">
+                    <h3>Mais opções</h3>
+                    <div id="options-group">
+                        <div class="option">
+                            <h4>Detalhar aluno</h4>
+                            <input type="text" placeholder="ID do aluno" />
+                            <button>Consultar</button>
+                        </div>
+                        <div class="option">
+                            <h4>Remover aluno</h4>
+                            <input type="text" placeholder="ID do aluno" />
+                            <button>Remover</button>
+                        </div>
+                        <div class="option">
+                            <h4>Listar alunos</h4>
+                            <button style="margin-top: 10vh">Listar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+        <!-- === JS File === -->
+        <script src="./assets/js/script.js"></script>
+    </body>
+</html>

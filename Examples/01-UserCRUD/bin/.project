@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>02-PostgreSQL-Integration</name>
+	<name>01-UserCRUD</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -22,7 +22,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1726805682297</id>
+			<id>1724383982745</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

@@ -6,8 +6,11 @@ Este repositório foi criado para armazenar o código dos exercícios avaliativo
 ### 01 - Somar dois números
 Este é o primeiro projeto desenvolvido durante a disciplina, com o objetivo de introduzir os conceitos básicos da linguagem Java e aprofundar o conhecimento sobre a integração da IDE Eclipse com o GitHub. O código simples realiza a soma de dois números inteiros e exibe o resultado ao usuário.
 
-### 02 - Integração PostgreSQL
+### 02 - Integração com PostgreSQL
 Este projeto foi criado com o intuito de treinar os conhecimentos adquiridos até o momento sobre Java, IDE Eclipse, Maven e PostgreSQL, por meio de um sistema simples de cadastro de alunos. Com ele, é possível realizar operações CRUD (criar, listar, atualizar e excluir) de alunos.
+
+### 03 - Integração com Spark
+Este projeto foi desenvolvido para aplicar e consolidar os conhecimentos adquiridos sobre Java, IDE Eclipse, Maven, PostgreSQL e Spark. O principal objetivo é fixar conceitos relacionados à criação de APIs utilizando o framework Spark. O sistema implementado permite realizar operações CRUD (criar, listar, atualizar e excluir) de alunos em um banco de dados.
 
 ## 💻 Tecnologias usadas
 * [Java](https://docs.oracle.com/en/java/): linguagem de programação orientada a objetos, de alto nível, projetada para ser robusta, segura e portável
@@ -51,3 +54,5 @@ Este projeto foi criado com o intuito de treinar os conhecimentos adquiridos at�
 
 ### 6. Execute o programa no Eclipse
 * Execute o programa no Eclipse e teste as funcionalidades.
+
+**Observação:** No projeto 03, se não for possível rodar o projeto e acessá-lo via navegador no endereço `http://localhost:6789`, pode ser que a porta `6789` já esteja em uso. Nesse caso, é necessário parar a aplicação que está utilizando essa porta e, em seguida, executar o projeto novamente.

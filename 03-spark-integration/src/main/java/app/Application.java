@@ -5,7 +5,7 @@ import service.StudentService;
 
 public class Application {
     private static StudentService studentService = new StudentService();
-	
+    
     public static void main(String[] args) {
         port(6789);
         
@@ -20,7 +20,7 @@ public class Application {
         get("/student/update/:id", (request, response) -> studentService.getToUpdate(request, response));
         
         post("/student/update/:id", (request, response) -> studentService.update(request, response));
-           
+        
         get("/student/delete/:id", (request, response) -> studentService.delete(request, response));
     }
 }

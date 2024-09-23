@@ -1,14 +1,13 @@
 package model;
 
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
+import java.time.LocalDate;
 
 public class Student {
     private int id;
     private String name;
     private String email;
     private String phoneNumber;
-    private LocalDateTime enrollmentDate;
+    private LocalDate enrollmentDate;
     private String course;
 
     public Student() {
@@ -16,11 +15,11 @@ public class Student {
         this.name = "";
         this.email = "";
         this.phoneNumber = "";
-        this.enrollmentDate = LocalDateTime.now().truncatedTo(ChronoUnit.SECONDS);
+        this.enrollmentDate = LocalDate.now();
         this.course = "";
     }
 
-    public Student(int id, String name, String email, String phoneNumber, LocalDateTime enrollmentDate, String course) {
+    public Student(int id, String name, String email, String phoneNumber, LocalDate enrollmentDate, String course) {
         setId(id);
         setName(name);
         setEmail(email);
@@ -61,12 +60,12 @@ public class Student {
         this.phoneNumber = phoneNumber;
     }
 
-    public LocalDateTime getEnrollmentDate() {
+    public LocalDate getEnrollmentDate() {
         return enrollmentDate;
     }
 
-    public void setEnrollmentDate(LocalDateTime enrollmentDate) {
-        LocalDateTime now = LocalDateTime.now();
+    public void setEnrollmentDate(LocalDate enrollmentDate) {
+        LocalDate now = LocalDate.now();
 
         if (now.compareTo(enrollmentDate) >= 0) {
             this.enrollmentDate = enrollmentDate;
